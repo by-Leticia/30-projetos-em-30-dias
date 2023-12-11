@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <button class="preTime" data-time="20" id="20secs">20 Secs</button>
+        <button class="preTime" data-time="300" id="Work5">Work 5</button>
+        <button class="preTime" data-time="900" id="15">Quick 15</button>
+        <button class="preTime" data-time="1200" id="20">Snack 20</button>
+        <button class="preTime" data-time="3600" id="LunchBreak">Lunch Break</button>
+        <form @keydown.enter.prevent name="customForm" id="custom">
+            <input id="input" type="text" name="minutes" placeholder="">
+            <select id="time" name="times">
+                <option class="option" value="seconds">Segundos</option>
+                <option class="option" value="minute">Minutos</option>
+            </select>
+        </form>
+    </nav>
+    <div class="display">
+        <h1 class="display__time-left"></h1>
+        <p class="display__end-time"></p>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

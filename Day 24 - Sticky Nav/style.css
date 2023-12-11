@@ -1,0 +1,174 @@
+html {
+    box-sizing: border-box;
+    background: #eeeeee;
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+}
+
+body {
+    margin: 0;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+.story {
+    max-width: 700px;
+    margin: 70px auto;
+    background: white;
+    padding: 40px;
+    text-align: justify;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+    transform: scale(0.98);
+    transition: transform 0.5s;
+}
+
+body.fixed-nav .story{
+    transform: scale(1);
+}
+
+header{
+    text-align: center;
+    height: 50vh;
+    background: url('https://free4kwallpapers.com/uploads/originals/2021/11/15/the-majestic-yosemite-wallpaper.jpg')center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h1 {
+   color: white;
+   font-size: 7vw;
+   text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
+}
+
+nav {
+   background: black;
+   top: 0;
+   width: 100%;
+   transition: all 0.5s;
+   position: relative;
+   z-index: 1;
+}
+
+body.fixed-nav nav{
+    position: fixed;
+    box-shadow: 0 5px 0 rgba(0,0,0,0.1);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+nav li{
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li#logo{
+    max-width: 0;
+    overflow: hidden;
+    background: white;
+    transition: all 0.5s;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+li#logo a {
+    color: black;
+}
+
+.fixed-nav li#logo{
+    max-width: 500px;
+}
+
+nav a{
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    color: white;
+    transition: all 0.2s;
+    text-transform: uppercase;
+}
+
+/*try something new*/
+
+.dropdown {
+    opacity: 0;
+    position: absolute;
+    overflow: hidden;
+    padding: 20px;
+    top: -20px;
+    border-radius: 2px;
+    transition: all 0.5s;
+    transform: translateY(100px);
+    will-change: opacity;
+    display: none;
+}
+
+.trigger-enter .dropdown {
+    display: block;
+}
+
+.trigger-enter-active .dropdown {
+    opacity: 1;
+}
+
+.dropdownBackground {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 50px 100px rgba(50, 50, 93, .1), 0 15px 35px rgba(50, 50, 93, .15), 0 5px 15px rgba(0, 0, 0, .1);
+    transition: all 0.3s, opacity 0.1s, transform 0.2s;
+    transform-origin: 50% 0;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+
+.dropdownBackground.open {
+    opacity: 1;
+}
+
+.arrow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: white;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.dropdownMaps {
+    min-width: 300px;
+}
+
+.dropdownMaps li {
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.trigger-enter .dropdown {
+    display: block;
+}
+
+.trigger-enter-active .dropdown {
+    opacity: 1;
+}
+
+.dropdownBackground.open {
+    opacity: 1;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Webcam!</title>
+    <script src="https://kit.fontawesome.com/3215047e91.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+
+<body>
+    <h1 class="greetings">Hey! Welcome!</h1>
+    <p class="greetings__text">This project is a webcam that cam take photos and download them! <br>Hope you enjoy 😊!</p>
+    <canvas class="photo"></canvas>
+    <video class="player"></video>
+    <div class="gallery">
+        <div class="gallery">
+            <div class="gallery__prev"></div>
+            <div class="gallery__next"></div>
+            <div class="strip"></div>
+        </div>
+        <div class="strip"></div>
+    </div>
+    <div class="column">
+        <div id="screenshotsContainer"></div>
+    </div>
+    <div class="controls">
+        <i class="fa-solid fa-camera fa-2xl" title="Clique aqui para abrir a Câmera!"></i>
+        <i class="fa-solid fa-image fa-2xl" title="Clique aqui para tirar uma foto!"></i>
+    </div>
+    <audio class="snap" src="snap.mp3" hidden></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
